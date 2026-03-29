@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="docTitle">Brahim Cheniti — Software Developer & Domain Specialist</title>
+    <meta name="description" content="Portfolio of Brahim Cheniti. PC & Mobile Application Developer and Premium Domain Name Specialist.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Brahim Cheniti — Portfolio">
+    <meta property="og:description" content="Software Developer & Domain Specialist based in Algeria.">
+    <meta property="og:url" content="https://brahimcheniti.online">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Inter & Outfit for EN, Cairo for AR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-mark">BC</span>
+                <span class="logo-text" data-i18n="logoText">Brahim Cheniti</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active" data-i18n="navHome">Home</a>
+                <a href="#about" class="nav-link" data-i18n="navAbout">About</a>
+                <a href="#services" class="nav-link" data-i18n="navServices">Services</a>
+                <a href="#domains" class="nav-link" data-i18n="navDomains">Domains</a>
+                <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+                
+                <!-- Language Switcher -->
+                <button id="langSwitcher" class="btn-lang" aria-label="Switch language">
+                    EN | بالعربية
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-bg-pattern"></div>
+            <div class="container hero-container">
+                <div class="hero-content fade-up-animate">
+                    <span class="badge" data-i18n="heroBadge">Software Developer & Domain Specialist</span>
+                    <h1 class="hero-title" data-i18n="heroTitle">Hi, I'm Brahim<br>Cheniti</h1>
+                    <div class="typed-text-container">
+                        <span class="static-text" data-i18n="heroBuild">I build</span>
+                        <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
+                    </div>
+                    <p class="hero-desc" data-i18n="heroDesc">Turning ideas into robust software solutions and connecting modern brands with premium digital real estate.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary" data-i18n="btnGetInTouch">Get in Touch</a>
+                        <a href="#services" class="btn btn-outline" data-i18n="btnViewServices">View Services</a>
+                    </div>
+                </div>
+                <!-- Abstract visual element on right side -->
+                <div class="hero-visual fade-up-animate delay-1">
+                    <div class="abstract-shape"></div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section bg-surface">
+            <div class="container">
+                <div class="section-header fade-up-animate">
+                    <h2 data-i18n="aboutHead">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-image-wrapper fade-up-animate">
+                        <!-- Profile Image per User Task -->
+                        <img src="assets/profile.jpg" alt="براهيم شنيتي - صورة شخصية" class="about-image">
+                    </div>
+                    
+                    <div class="about-text fade-up-animate delay-1">
+                        <h3 data-i18n="aboutSubhead">My Journey</h3>
+                        <p data-i18n="aboutP1">Hello! I'm Brahim, a 39-year-old technologist based in Algeria. My academic journey began with a BSc in Nature and Life Sciences (2007), but my true passion has always been rooted in technology and digital creation.</p>
+                        <p data-i18n="aboutP2">Over the years, I successfully pivoted my career into software development, mastering both PC and Mobile application creation. I specialize in building robust apps tailored to client needs. Alongside coding, I've developed a sharp eye for digital assets, managing a portfolio of premium domain names to help modern brands establish their online identity.</p>
+                        
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="statYears">Years in Tech</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="statProjects">Projects Delivered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="statDomains">Domains Managed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-header fade-up-animate">
+                    <h2 data-i18n="servicesHead">Services</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-up-animate delay-1">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3 data-i18n="srvPCHead">PC Software Development</h3>
+                        <p data-i18n="srvPCDesc">Custom desktop applications, automation tools, system utilities, and highly-tailored enterprise software solutions designed for maximum efficiency.</p>
+                    </div>
+
+                    <div class="service-card fade-up-animate delay-2">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <h3 data-i18n="srvMobileHead">Mobile App Development</h3>
+                        <p data-i18n="srvMobileDesc">Responsive, engaging, and performant mobile applications built for Android and iOS, bringing your product directly to users' hands.</p>
+                    </div>
+
+                    <div class="service-card fade-up-animate delay-3">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h3 data-i18n="srvDomainHead">Domain Name Services</h3>
+                        <p data-i18n="srvDomainDesc">Premium domain name acquisition, valuation, brokering, and portfolio management. Finding the perfect digital real estate for your brand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domains Showcase Section -->
+        <section id="domains" class="domains section bg-surface">
+            <div class="container">
+                <div class="section-header fade-up-animate">
+                    <h2 data-i18n="domainsHead">Premium Domains for Sale</h2>
+                    <p class="section-subtitle" data-i18n="domainsSub">Invest in the perfect domain name for your brand.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="domain-filters fade-up-animate">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+                    <button class="filter-btn" data-filter=".com">.com</button>
+                    <button class="filter-btn" data-filter=".io">.io</button>
+                    <button class="filter-btn" data-filter=".dev">.dev</button>
+                    <button class="filter-btn" data-filter=".online">.online</button>
+                    <button class="filter-btn" data-filter=".net">.net</button>
+                </div>
+
+                <div class="domains-grid" id="domainsGrid">
+                    <!-- Domains will be injected here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-up-animate">
+                        <h2 data-i18n="contactHead">Let's Work Together</h2>
+                        <div class="section-line left"></div>
+                        <p data-i18n="contactDesc">Whether you have a project in mind, need a specific domain, or just want to say hi, feel free to drop a message.</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:brahim.cheniti.dz@gmail.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <span>brahim.cheniti.dz@gmail.com</span>
+                            </a>
+                            <a href="tel:+213774050604" class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <span dir="ltr">+213 774 050 604</span>
+                            </a>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                </div>
+                                <span>brahimcheniti.online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper fade-up-animate delay-1">
+                        <!-- Netlify compatible form -->
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                            <!-- Hidden Netlify Fields -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden-bot-field" style="display:none;"><label data-i18n="formBot">Don't fill this out if you're human: <input name="bot-field" /></label></p>
+                            
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" placeholder=" " required />
+                                <label for="name" data-i18n="formName">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder=" " required />
+                                <label for="email" data-i18n="formEmail">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" id="subject" placeholder=" " />
+                                <label for="subject" data-i18n="formSubject">Subject (or Domain Name)</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" placeholder=" " required rows="5"></textarea>
+                                <label for="message" data-i18n="formMessage">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span data-i18n="formSubmit">Send Message</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-mark">BC</span>
+                    <span class="logo-text" data-i18n="logoText">Brahim Cheniti</span>
+                </a>
+                <p data-i18n="heroBadge">Software Developer & Domain Specialist</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home" data-i18n="navHome">Home</a>
+                <a href="#about" data-i18n="navAbout">About</a>
+                <a href="#services" data-i18n="navServices">Services</a>
+                <a href="#domains" data-i18n="navDomains">Domains</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footerCopy">&copy; 2026 Brahim Cheniti. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
