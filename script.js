@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         aboutHead: { en: "About Me", ar: "نبذة عني" },
         aboutSubhead: { en: "My Journey", ar: "مسيرتي" },
-        aboutP1: { en: "Hello! I'm Brahim, a 39-year-old technologist based in Algeria. My academic journey began with a BSc in Nature and Life Sciences (2007), but my true passion has always been rooted in technology and digital creation.", ar: "مرحباً! أنا براهيم، تقني يبلغ من العمر 39 عاماً ومقري في الجزائر. بدأت مسيرتي الأكاديمية بدرجة البكالوريوس في علوم الطبيعة والحياة (2007)، لكن شغفي الحقيقي كان دائماً متجذراً في التكنولوجيا والإبداع الرقمي." },
-        aboutP2: { en: "Over the years, I successfully pivoted my career into software development, mastering both PC and Mobile application creation. I specialize in building robust apps tailored to client needs. Alongside coding, I've developed a sharp eye for digital assets, managing a portfolio of premium domain names to help modern brands establish their online identity.", ar: "على مر السنين، نجحت في تحويل مساري المهني إلى تطوير البرمجيات، وأتقنت إنشاء تطبيقات الكمبيوتر والهواتف المحمولة. أتخصص في بناء تطبيقات قوية مصممة خصيصاً لتلبية احتياجات العملاء. إلى جانب البرمجة، طورت نظرة ثاقبة للأصول الرقمية، حيث أدير محفظة من أسماء النطاقات المميزة لمساعدة العلامات التجارية الحديثة على ترسيخ هويتها عبر الإنترنت." },
+        aboutP1: { en: "I am Brahim, a 39-year-old developer based in Algeria. I hold a BSc in Nature and Life Sciences (2007), but my true passion is technology.", ar: "أنا براهيم، مطور أبلغ من العمر 39 عاماً وأقيم في الجزائر. أحمل شهادة البكالوريوس في علوم الطبيعة والحياة (2007)، لكن شغفي الحقيقي هو التكنولوجيا." },
+        aboutP2: { en: "Over the past 3 years, I have specialized in building custom PC and mobile applications, while also managing a strong portfolio of premium domain names.", ar: "على مدى السنوات الثلاث الماضية، تخصصت في بناء تطبيقات كمبيوتر وهواتف محمولة مخصصة، إلى جانب إدارة محفظة قوية من أسماء النطاقات المميزة." },
         
         statYears: { en: "Years in Tech", ar: "سنوات في التقنية" },
         statProjects: { en: "Projects Delivered", ar: "مشاريع منجزة" },
@@ -95,13 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
 
     const domainsData = [
-        { name: "techflow.io", price: "$2,500", tld: ".io", tldClass: "tld-io", status: "Premium", statusClass: "status-premium" },
-        { name: "brandpulse.com", price: "$4,000", tld: ".com", tldClass: "tld-com", status: "Available", statusClass: "status-available" },
-        { name: "devcraft.dev", price: "$1,800", tld: ".dev", tldClass: "tld-dev", status: "Negotiable", statusClass: "status-negotiable" },
-        { name: "smartnode.net", price: "$1,200", tld: ".net", tldClass: "tld-net", status: "Available", statusClass: "status-available" },
-        { name: "cloudpeak.io", price: "$3,500", tld: ".io", tldClass: "tld-io", status: "Premium", statusClass: "status-premium" },
-        { name: "vortexlab.com", price: "$2,800", tld: ".com", tldClass: "tld-com", status: "Negotiable", statusClass: "status-negotiable" },
-        { name: "codeforge.online", price: "$900", tld: ".online", tldClass: "tld-online", status: "Available", statusClass: "status-available" }
+        { name: "Partamina.com", price: "$2,500", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "AutoNovi.com", price: "$1,800", tld: ".com", tldClass: "tld-com", status: "Available", statusClass: "status-available" },
+        { name: "SmartSaudiArabia.com", price: "$3,500", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "Cattea.xyz", price: "$900", tld: ".xyz", tldClass: "tld-xyz", status: "Negotiable", statusClass: "status-negotiable" },
+        { name: "HoustonRent.com", price: "$4,000", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "EdmontonNutrition.com", price: "$2,200", tld: ".com", tldClass: "tld-com", status: "Available", statusClass: "status-available" },
+        { name: "AustinTables.com", price: "$1,500", tld: ".com", tldClass: "tld-com", status: "Negotiable", statusClass: "status-negotiable" },
+        { name: "SiteTool.app", price: "$1,200", tld: ".app", tldClass: "tld-app", status: "Available", statusClass: "status-available" },
+        { name: "IToolBox.app", price: "$1,200", tld: ".app", tldClass: "tld-app", status: "Available", statusClass: "status-available" },
+        { name: "Iviwa.com", price: "$2,800", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "FootballResults.xyz", price: "$1,500", tld: ".xyz", tldClass: "tld-xyz", status: "Available", statusClass: "status-available" },
+        { name: "DiscoverAi.online", price: "$1,900", tld: ".online", tldClass: "tld-online", status: "Premium", statusClass: "status-premium" },
+        { name: "Kahina.net", price: "$1,400", tld: ".net", tldClass: "tld-net", status: "Available", statusClass: "status-available" },
+        { name: "SmileClubeCare.com", price: "$2,000", tld: ".com", tldClass: "tld-com", status: "Negotiable", statusClass: "status-negotiable" },
+        { name: "AiMob.xyz", price: "$1,100", tld: ".xyz", tldClass: "tld-xyz", status: "Available", statusClass: "status-available" },
+        { name: "BiotechArabia.com", price: "$3,800", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "DeepblueAi.xyz", price: "$1,600", tld: ".xyz", tldClass: "tld-xyz", status: "Available", statusClass: "status-available" },
+        { name: "HotelPublic.com", price: "$2,600", tld: ".com", tldClass: "tld-com", status: "Negotiable", statusClass: "status-negotiable" },
+        { name: "Younghu.xyz", price: "$900", tld: ".xyz", tldClass: "tld-xyz", status: "Available", statusClass: "status-available" },
+        { name: "PremiumMushroom.com", price: "$2,100", tld: ".com", tldClass: "tld-com", status: "Available", statusClass: "status-available" },
+        { name: "CarAudioSolution.com", price: "$1,700", tld: ".com", tldClass: "tld-com", status: "Negotiable", statusClass: "status-negotiable" },
+        { name: "SofiaPlaza.com", price: "$3,000", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" },
+        { name: "898880.com", price: "$5,000", tld: ".com", tldClass: "tld-com", status: "Premium", statusClass: "status-premium" }
     ];
 
     const domainsGrid = document.getElementById('domainsGrid');
@@ -364,6 +380,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    /* ====================================================================
+       Netlify Form Submission AJAX
+       ==================================================================== */
+    const contactForm = document.querySelector('form[name="contact"]');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const myForm = e.target;
+            const formData = new FormData(myForm);
+            const urlSearchParams = new URLSearchParams(formData).toString();
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: urlSearchParams
+            })
+            .then(() => {
+                myForm.reset();
+                const submitBtnSpan = myForm.querySelector('button[type="submit"] span');
+                if (submitBtnSpan) {
+                    const originalText = submitBtnSpan.innerText;
+                    submitBtnSpan.innerText = currentLang === 'ar' ? 'تم الإرسال بنجاح!' : 'Sent successfully!';
+                    setTimeout(() => {
+                        submitBtnSpan.innerText = originalText;
+                    }, 4000);
+                }
+            })
+            .catch(error => console.error(error));
         });
     }
 });
