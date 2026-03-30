@@ -39,10 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
         srvMobileDesc: { en: "Responsive, engaging, and performant mobile applications built for Android and iOS, bringing your product directly to users' hands.", ar: "تطبيقات هواتف محمولة متجاوبة وجذابة وعالية الأداء تعمل على نظامي أندرويد وiOS، لتضع منتجك مباشرة في أيدي المستخدمين." },
         srvDomainHead: { en: "Domain Name Services", ar: "خدمات أسماء النطاقات" },
         srvDomainDesc: { en: "Premium domain name acquisition, valuation, brokering, and portfolio management. Finding the perfect digital real estate for your brand.", ar: "اقتناء وتقييم ووساطة أسماء النطاقات المميزة وإدارة المحافظ. إيجاد الأصل الرقمي المثالي لعلامتك التجارية." },
+        serviceWebTitle: { en: "Web Development", ar: "تطوير المواقع الإلكترونية" },
+        serviceWebDesc: { en: "Creating responsive, fast, and secure websites tailored to your needs.", ar: "برمجة وتصميم مواقع إلكترونية متجاوبة، سريعة، وآمنة تلبي احتياجات عملك." },
         
         domainsHead: { en: "Premium Domains for Sale", ar: "نطاقات مميزة للبيع" },
         domainsSub: { en: "Invest in the perfect domain name for your brand.", ar: "استثمر في اسم النطاق المثالي لعلامتك التجارية." },
         filterAll: { en: "All", ar: "الكل" },
+
+        projectsTitle: { en: "My Projects", ar: "معرض مشاريعي" },
+        watchDemo: { en: "Watch Demo", ar: "مشاهدة الفيديو" },
+        project1Title: { en: "Inventory & Catering Management (Desktop)", ar: "برنامج إدارة المخزون والإطعام (نسخة الحاسوب)" },
+        project1Desc: { en: "A comprehensive desktop application designed to streamline inventory tracking and catering operations.", ar: "نظام متكامل للحواسيب مصمم لتنظيم تتبع المخزون وعمليات الإطعام بكفاءة عالية." },
+        project2Title: { en: "Inventory & Catering Management (Mobile)", ar: "تطبيق إدارة المخزون والإطعام (نسخة الهاتف)" },
+        project2Desc: { en: "The mobile version of the management system, ensuring full access and control on the go.", ar: "النسخة المحمولة من نظام الإدارة، لتسهيل الوصول والتحكم من أي مكان عبر الهاتف." },
         
         contactHead: { en: "Let's Work Together", ar: "دعنا نعمل معاً" },
         contactDesc: { en: "Whether you have a project in mind, need a specific domain, or just want to say hi, feel free to drop a message.", ar: "سواء كان لديك مشروع في ذهنك، أو تحتاج إلى نطاق معين، أو تريد فقط إلقاء التحية، فلا تتردد في ترك رسالة." },
@@ -414,5 +423,72 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error(error));
         });
+    }
+
+    /* ====================================================================
+       Modal Logic for Projects
+       ==================================================================== */
+    const projectData = { 
+        1: { ext: 'png' }, 
+        2: { ext: 'jpg' } 
+    };
+    
+    let currentSlide = 0;
+    
+    window.openImageModal = function(projectId) {
+        const modal = document.getElementById('image-modal');
+        const slider = document.getElementById('image-slider');
+        if (!modal || !slider) return;
+        
+        slider.innerHTML = '';
+        currentSlide = 0;
+        
+        for (let i = 1; i <= 15; i++) {
+            const img = document.createElement('img');
+            img.src = `assets/project${projectId}/${i}.${projectData[projectId].ext}`;
+            img.style.display = i === 1 ? 'block' : 'none';
+            img.loading = "lazy";
+            slider.appendChild(img);
+        }
+        
+        modal.style.display = 'block';
+    }
+    
+    window.closeImageModal = function() {
+        const modal = document.getElementById('image-modal');
+        if (modal) modal.style.display = 'none';
+    }
+    
+    window.changeSlide = function(direction) {
+        const slider = document.getElementById('image-slider');
+        if (!slider) return;
+        const slides = slider.querySelectorAll('img');
+        if (slides.length === 0) return;
+        
+        slides[currentSlide].style.display = 'none';
+        currentSlide += direction;
+        
+        if (currentSlide >= slides.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        
+        slides[currentSlide].style.display = 'block';
+    }
+    
+    window.openVideoModal = function(projectId) {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('video-iframe');
+        if (!modal || !iframe) return;
+        
+        // Placeholder for demo videos
+        const videoUrL = projectId === 1 ? "https://www.youtube.com/embed/dQw4w9WgXcQ" : "https://www.youtube.com/embed/dQw4w9WgXcQ"; 
+        iframe.src = videoUrL;
+        modal.style.display = 'block';
+    }
+    
+    window.closeVideoModal = function() {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('video-iframe');
+        if (modal) modal.style.display = 'none';
+        if (iframe) iframe.src = "";
     }
 });

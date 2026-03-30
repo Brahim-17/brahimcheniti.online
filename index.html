@@ -150,6 +150,17 @@
                         <h3 data-i18n="srvDomainHead">Domain Name Services</h3>
                         <p data-i18n="srvDomainDesc">Premium domain name acquisition, valuation, brokering, and portfolio management. Finding the perfect digital real estate for your brand.</p>
                     </div>
+
+                    <div class="service-card fade-up-animate delay-4">
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="serviceWebTitle">Web Development</h3>
+                        <p data-i18n="serviceWebDesc">Creating responsive, fast, and secure websites tailored to your needs.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,6 +185,42 @@
 
                 <div class="domains-grid" id="domainsGrid">
                     <!-- Domains will be injected here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header fade-up-animate">
+                    <h2 data-i18n="projectsTitle">My Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 (Desktop) -->
+                    <div class="project-card fade-up-animate">
+                        <img src="assets/project1/main.png" alt="Project 1" style="cursor: pointer;" onclick="openImageModal(1)">
+                        <div class="project-content">
+                            <h3 data-i18n="project1Title">Inventory & Catering Management (Desktop)</h3>
+                            <p data-i18n="project1Desc">A comprehensive desktop application designed to streamline inventory tracking and catering operations.</p>
+                            <div class="project-actions" style="margin-top: 20px;">
+                                <button class="btn btn-primary" data-i18n="watchDemo" onclick="openVideoModal(1)">Watch Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Mobile) -->
+                    <div class="project-card fade-up-animate delay-1">
+                        <img src="assets/project2/main.jpg" alt="Project 2" style="cursor: pointer;" onclick="openImageModal(2)">
+                        <div class="project-content">
+                            <h3 data-i18n="project2Title">Inventory & Catering Management (Mobile)</h3>
+                            <p data-i18n="project2Desc">The mobile version of the management system, ensuring full access and control on the go.</p>
+                            <div class="project-actions" style="margin-top: 20px;">
+                                <button class="btn btn-primary" data-i18n="watchDemo" onclick="openVideoModal(2)">Watch Demo</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -263,6 +310,26 @@
             <p data-i18n="footerCopy">&copy; 2026 Brahim Cheniti. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <div class="modal-content">
+            <div class="image-slider" id="image-slider">
+                <!-- Images injected via JS -->
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+        <div class="modal-content video-content">
+            <iframe id="video-iframe" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
