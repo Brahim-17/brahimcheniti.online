@@ -210,11 +210,8 @@
                     </div>
 
                     <div class="contact-form-wrapper fade-up-animate delay-1">
-                        <!-- Netlify compatible form -->
-                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                            <!-- Hidden Netlify Fields -->
-                            <input type="hidden" name="form-name" value="contact" />
-                            <p class="hidden-bot-field" style="display:none;"><label data-i18n="formBot">Don't fill this out if you're human: <input name="bot-field" /></label></p>
+                        <!-- Formspree compatible form -->
+                        <form name="contact" action="https://formspree.io/f/mojpdjyb" method="POST" class="contact-form">
                             
                             <div class="form-group">
                                 <input type="text" name="name" id="name" placeholder=" " required />

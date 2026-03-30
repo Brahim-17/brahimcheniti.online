@@ -384,30 +384,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ====================================================================
-       Netlify Form Submission AJAX
+       Formspree Form Submission AJAX
        ==================================================================== */
     const contactForm = document.querySelector('form[name="contact"]');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const myForm = e.target;
-            const formData = new FormData(myForm);
-            const urlSearchParams = new URLSearchParams(formData).toString();
 
-            fetch('/', {
+            fetch('https://formspree.io/f/mojpdjyb', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: urlSearchParams
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(new FormData(myForm)))
             })
-            .then(() => {
-                myForm.reset();
-                const submitBtnSpan = myForm.querySelector('button[type="submit"] span');
-                if (submitBtnSpan) {
-                    const originalText = submitBtnSpan.innerText;
-                    submitBtnSpan.innerText = currentLang === 'ar' ? 'تم الإرسال بنجاح!' : 'Sent successfully!';
-                    setTimeout(() => {
-                        submitBtnSpan.innerText = originalText;
-                    }, 4000);
+            .then((response) => {
+                if (response.ok) {
+                    myForm.reset();
+                    const submitBtnSpan = myForm.querySelector('button[type="submit"] span');
+                    if (submitBtnSpan) {
+                        const originalText = submitBtnSpan.innerText;
+                        submitBtnSpan.innerText = currentLang === 'ar' ? 'تم الإرسال بنجاح!' : 'Sent successfully!';
+                        setTimeout(() => {
+                            submitBtnSpan.innerText = originalText;
+                        }, 4000);
+                    }
+                } else {
+                    console.error('Form submission failed.');
                 }
             })
             .catch(error => console.error(error));
