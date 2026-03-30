@@ -429,8 +429,8 @@ document.addEventListener('DOMContentLoaded', () => {
        Modal Logic for Projects
        ==================================================================== */
     const projectData = { 
-        1: { ext: 'png' }, 
-        2: { ext: 'jpg' } 
+        1: { ext: 'png', videoId: 'RDrZXySPoNI' }, 
+        2: { ext: 'jpg', videoId: 'RDrZXySPoNI' } 
     };
     
     let currentSlide = 0;
@@ -479,9 +479,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const iframe = document.getElementById('video-iframe');
         if (!modal || !iframe) return;
         
-        // Placeholder for demo videos
-        const videoUrL = projectId === 1 ? "https://www.youtube.com/embed/dQw4w9WgXcQ" : "https://www.youtube.com/embed/dQw4w9WgXcQ"; 
-        iframe.src = videoUrL;
+        const videoId = projectData[projectId].videoId;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
         modal.style.display = 'block';
     }
     
